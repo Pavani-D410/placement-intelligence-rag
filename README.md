@@ -244,15 +244,16 @@ Output: No relevant information found in the uploaded dataset.
 
 # Future Improvements
 
-* OCR integration
-* Multimodal image retrieval
-* Conversational memory
-* LLM-based answer synthesis
-* Agentic workflows
-* Deployment-ready cloud inference
+* Advanced OCR optimization for large-scale document ingestion
+* Multimodal image and chart retrieval
+* LLM-based contextual answer synthesis
+* Conversational memory enhancement
+* Agentic workflow orchestration
+* Deployment-ready scalable cloud inference
+
 
 ---
 
 # Author
 
-Developed as part of RAG-ATHON 24 hackathon challenge.
+Pavani Dangudubiyyam

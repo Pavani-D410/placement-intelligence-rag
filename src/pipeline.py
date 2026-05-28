@@ -1,5 +1,9 @@
 from src.ingestion.pdf_loader import load_pdf
 
+from src.ingestion.ocr import (
+    extract_text_from_images
+)
+
 from src.chunking.semantic_chunker import (
     create_chunks,
     attach_metadata
@@ -79,7 +83,13 @@ def run_pipeline(query):
         "Placement_RAG_Dataset_Enhanced.pdf"
     )
 
-    text = load_pdf(pdf_path)
+    pdf_text = load_pdf(pdf_path)
+
+    ocr_text = extract_text_from_images(
+        pdf_path
+    )
+
+    text = pdf_text + "\n" + ocr_text
 
     chunks = create_chunks(
         text,

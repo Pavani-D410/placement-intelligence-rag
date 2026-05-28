@@ -1,5 +1,7 @@
 import streamlit as st
 
+from src.pipeline import run_pipeline
+
 
 st.set_page_config(
     page_title="Placement Intelligence Assistant"
@@ -16,10 +18,14 @@ query = st.text_input(
 
 if query:
 
-    st.write(
-        f"Processing query: {query}"
-    )
+    result = run_pipeline(query)
 
-    st.success(
-        "RAG pipeline connected successfully."
-    )
+    st.subheader("Answer")
+
+    st.write(result["answer"])
+
+    st.subheader("Sources")
+
+    for source in result["sources"]:
+
+        st.write(source)

@@ -3,7 +3,7 @@ import chromadb
 
 client = chromadb.Client()
 
-collection = client.create_collection(
+collection = client.get_or_create_collection(
     name="placement_rag"
 )
 

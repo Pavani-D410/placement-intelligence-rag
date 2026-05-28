@@ -1,8 +1,5 @@
 from src.ingestion.pdf_loader import load_pdf
 
-from src.ingestion.ocr import (
-    extract_text_from_images
-)
 
 from src.chunking.semantic_chunker import (
     create_chunks,
@@ -85,9 +82,13 @@ def run_pipeline(query):
 
     pdf_text = load_pdf(pdf_path)
 
-    ocr_text = extract_text_from_images(
-        pdf_path
-    )
+    with open(
+    "cache/ocr_text.txt",
+    "r",
+    encoding="utf-8"
+     ) as file:
+
+     ocr_text = file.read()
 
     text = pdf_text + "\n" + ocr_text
 

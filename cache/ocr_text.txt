@@ -1,0 +1,289 @@
+Placement
+"tantelligence
+RAG
+Assistant Dataset
+SVECW
+Department of Information Technology
+RAG-ATHON 24
+This
+dataset  is
+designed
+for
+students   building
+Multimodal
+Retrieval-Augmented
+Generation   (RAG)
+systems.
+It
+contains
+text
+narratives,
+structured
+tables,
+bar
+chart  images,  multi-hop
+reasoning
+challenges, conflicting data, temporal queries, and adversarial test questions
+all within a real-world
+placement intelligence context. Students must handle each content type with appropriate ingestion, chunking,
+embedding, and retrieval strategies.
+Content Modality Map
+Section
+Content Type
+RAG Challenge
+Difficulty
+Company Profiles (19 cos)
+Structured Tables
+Table extraction from PDF
+Medium
+Interview Experiences
+Repetitive
+Text
+Deduplication, Chunking
+Medium
+Hiring Distribution Charts
+Bar Chart Images
+Multimodal
+Vision RAG
+Hard
+Overall Statistics
+Multi-row Table
+Cross-document aggregation
+Hard
+Eligibility Filter Section
+Conditional Text
+Structured filtering queries
+Medium
+Multi-hop Reasoning Section
+Cross-company Text
+Multi-document synthesis
+Hard
+Temporal Trend Section
+Time-series Text
+Temporal reasoning queries
+Hard
+Conflicting Data Section
+Inconsistent Records
+Hallucination detection
+Expert
+Adversarial Queries Section
+Out-of-corpus Questions
+Graceful fallback handling
+Expert
+Free
+Section 1: Company Eligibility Profiles
+The table below contains placement eligibility  criteria for all 19 companies
+This is the primary structured
+knowledge
+source_
+A_
+RAG system must correctly extract and compare these
+values
+across
+companies to
+answer
+eligibility queries_
+Max
+Bond
+Company
+Min CGPA
+Package (LPA)
+Key Topics
+Tech Focus
+Backlogs
+(Yrs)
+TCS
+7.5
+4.1
+DSA, System Design
+System Design
+Infosys
+8.0
+42.9
+DSA, OOPs
+Java
+Deloitte
+7.7
+9.6
+DSA, Aptitude
+System Design
+Accenture
+8.2
+17.3
+2
+DSA, Cloud
+System Design
+Amazon
+6.4
+28.6
+2
+DSA, C++
+LLD
+C++
+Flipkart
+7.8
+2
+25.3
+2
+DSA, Python
+Python
+Google
+7.4
+42.0
+DSA, Algorithms
+Python
+Microsoft
+6.1
+21.4
+DSA, OS, DBMS
+C++
+Wipro
+6.7
+26.1
+DSA, System Design
+System Design
+Cognizant
+8.4
+42.3
+2
+DSA
+Java
+Java
+Capgemini
+7.1
+38.3
+2
+DSA, C++
+C++
+IBM
+7.5
+27.5
+DSA, Cloud
+Ct+
+Adobe
+7.5
+18.3
+DSA, System Design
+System Design
+Oracle
+7.7
+17.3
+2
+DSA, DBMS
+Python
+SAP
+8.4
+20.7
+2
+DSA, C++
+C++
+HCL
+8.4
+28.1
+2
+DSA,
+Cloud
+Cloud
+Tech Mahindra
+8.1
+2
+35.9
+DSA, System Design
+System Design
+Qualcomm
+7.2
+2
+41.3
+DSA, Cloud
+Cloud
+Intel
+7.0
+41.4
+DSA, Python
+Python
+Samsung R&D;
+6.3
+7.6
+DSA
+Java
+Java
+RAG Challenge
+Table Extraction
+Standard PyPDFLoader often extracts table data as garbled text; merging columns incorrectly. Students should use
+pdfplumber or camelot for accurate table extraction, then convert rows to structured JSON or natural language passages
+before embedding:
+Section 2: Interview Experience Summaries
+RAG Challenge
+Duplicate Content
+The original dataset contains each interview experience repeated 3x per company. This is intentional
+students must
+detect and deduplicate content during ingestion. Embedding near-identical chunks wastes vector store space and distorts
+retrieval scores_
+TCS
+Technical Focus: System Design
+Round
+Details
+Round
+Online Assessment: Aptitude
+Logical Reasoning
+DSA coding (HackerRank; 90 min)
+Round 2
+Technical Interview: System Design (LLDIHLD); previous projects, data structures
+Round 3
+Managerial/HR: Behavioural questions, teamwork scenarios,
+TCS?
+Tip: Strong DSA fundamentals, design patterns, OOPs principles. Know your projects end-to-end.
+Amazon
+Technical Focus: C++
+LLD
+Round
+Details
+Round
+Online Assessment: 2 DSA problems (medium-hard), 45 min
+Round 2
+Technical Interview 1: ArrayIDPIGraph problems + time-space complexity analysis
+Round 3
+Technical Interview 2: LLD (Low Level Design) -
+design a parking lot system
+Round 4
+Bar Raiser
+HR: Leadership Principles (STAR format answers essential)
+Tip: Amazon's Leadership Principles are non-negotiable. Prepare STAR stories for all 16 principles. DSA difficulty is
+higher than service companies:
+Google
+Technical Focus: Python
+Algorithms
+Round
+Details
+Round
+Online Assessment: 2 algorithmic problems (competitive programming level)
+Round 2
+Phone Screen:
+coding problem
+discussion on approach and complexity
+Round 3
+Onsite Round 1: Graphs
+Dynamic Programming
+Round 4
+Onsite Round 2: System Design (scalable distributed system)
+Round 5
+Onsite Round 3: Behavioural
+(Googleyness)
+Tip: Google emphasises algorithmic thinking over implementation speed. Practice on LeetCode Hard. System Design
+must cover
+scalability at Google-scale:
+Infosys
+Technical Focus: Java
+OOPs
+Round
+Details
+Round
+Online Assessment: Aptitude
+Logical
+Verbal
+Java MCQ
+Round 2
+Technical Interview: Core Java, OOPS principles, collections, multithreading
+Round 3
+HR Round: Career goals, relocation flexibility, Why Infosys?
+Why

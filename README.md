@@ -158,7 +158,7 @@ placement-intelligence-rag/
 ## Clone Repository
 
 ```bash
-git clone <your_repo_url>
+git clone https://github.com/Pavani-D410/placement-intelligence-rag
 cd placement-intelligence-rag
 ```
 
